@@ -1,6 +1,6 @@
 .DS_Store
-./dl-front/node_modules
-./dl-back/node_modules
+/dl-front/node_modules/*
+/dl-back/node_modules/*
 /dist
 
 
