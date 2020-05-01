@@ -4,6 +4,7 @@ const bodyParser = require('body-parser');
 const dotenv = require('dotenv');
 const post = require('./src/helpers/routing/post');
 const get = require('./src/helpers/routing/get');
+const check = require('./src/helpers/routing/check');
 const app = express();
 dotenv.config();
 
@@ -27,3 +28,4 @@ start();
 
 app.get('/api/tsk', get);
 app.post('/api', post);
+app.post('/api/check', check);

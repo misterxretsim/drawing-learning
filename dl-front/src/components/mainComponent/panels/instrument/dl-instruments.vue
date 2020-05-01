@@ -1,6 +1,7 @@
 <template>
     <div class="inst">
         <dl-inst-size/>
+        <dl-inst-eraser class="dl-btn"/>
         <dl-inst-clear class="dl-btn"/>
     </div>
 </template>
@@ -10,6 +11,7 @@
         name: 'dl-instruments',
         components: {
             'dl-inst-size': () => import('./dl-inst-size.vue'),
+            'dl-inst-eraser': () => import('./dl-inst-eraser.vue'),
             'dl-inst-clear': () => import('./dl-inst-clear.vue')
         }
     }
