@@ -1,6 +1,6 @@
 <template>
     <div class="tsk">
-        <h3>Level #{{this.$store.getters.tsk.id}}</h3>
+        <h3>Level #{{this.$store.getters.tsk.lvl}}</h3>
         <h5>Draw{{` ${this.$store.getters.tsk.name}`}}</h5>
         <dl-tsk-change class="dl-btn"/>
         <dl-tsk-examine class="dl-btn"/>
