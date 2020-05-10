@@ -1,10 +1,9 @@
 <template>
     <div class="tsk">
-        <h3>Level #{{this.$store.getters.tsk.lvl}}</h3>
+        <h3>Level #{{this.$store.getters.tsk.level}}</h3>
         <h5>Draw{{` ${this.$store.getters.tsk.name}`}}</h5>
         <dl-tsk-change class="dl-btn"/>
         <dl-tsk-examine class="dl-btn"/>
-        <dl-tsk-lvl />
     </div>
 </template>
 
@@ -13,8 +12,7 @@
         name: 'dl-task',
         components: {
             'dl-tsk-change': () => import('./dl-tsk-change.vue'),
-            'dl-tsk-examine': () => import('./dl-tsk-examine.vue'),
-            'dl-tsk-lvl': () => import('./dl-tsk-lvl.vue')
+            'dl-tsk-examine': () => import('./dl-tsk-examine.vue')
         },
         mounted () {
             this.$store.dispatch('getTsk')

@@ -9,7 +9,7 @@
         name: 'dl-tsk-change',
         methods: {
             switchTsk () {
-                this.$store.dispatch('getTsk')
+                this.$store.dispatch('changeTsk', this.$store.getters.tsk.level)
             }
         }
     }
