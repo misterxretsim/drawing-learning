@@ -40,9 +40,10 @@ export default {
             if (rs.ok) {
                 const res = await rs.json();
                 if (res.result) {
-                    ctx.commit('upTsk', res.task)
+                    ctx.commit('upTsk', res.task);
+                    alert(`Good job!\nYour drawing has ${res.accuracy}% similarity.\nNew task – ${ctx.getters.tsk.name}.`)
                 } else {
-                    alert('😥')
+                    alert(`😥\nYour drawing has ${res.accuracy}% similarity.\nTry again.`)
                 }
             } else {
                 console.log('Ошибка HTTP: ' + rs.status);
