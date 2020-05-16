@@ -1,6 +1,6 @@
 <template>
     <div class="chooseSize">
-        <h4>Choose size and color</h4>
+        <h3>Instruments</h3>
         <center>
             <input type="range"
                    v-model="rValue"
@@ -8,8 +8,11 @@
                    step="5"
                    min="10"
                    max="50">
+<!--            <div class="ex"-->
+<!--                 @click="$store.commit('upColorChoose')"-->
+<!--                 :style="`width:${rValue}px;height:${rValue}px;background:${this.$store.getters.color}`">-->
+<!--            </div>-->
             <div class="ex"
-                 @click="$store.commit('upColorChoose')"
                  :style="`width:${rValue}px;height:${rValue}px;background:${this.$store.getters.color}`">
             </div>
             <h5>{{rValue}}</h5>
@@ -38,7 +41,7 @@
 </script>
 
 <style scoped>
-    h4 {
+    h3 {
         margin-bottom: 100px;
     }
     center {
@@ -85,11 +88,11 @@
         top: 5%;
         left: 20%;
         transform: translateY(-50%) translateX(-50%);
-        cursor: pointer;
+        /*cursor: pointer;*/
         transition: .2s;
         border: 1px solid transparent;
     }
-    .ex:hover {
-        border: 1px solid white;
-    }
+    /*.ex:hover {*/
+    /*    border: 1px solid white;*/
+    /*}*/
 </style>
