@@ -30,12 +30,14 @@ export default {
             }
         },
         async examine (ctx, obj) {
+            const can = document.getElementById('can');
+            const image = can.toDataURL();
             const rs = await fetch('/api/examine', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json;charset=utf-8'
                 },
-                body: JSON.stringify({image: 123, task: obj.task, level: obj.level})
+                body: JSON.stringify({image: image, task: obj.task, level: obj.level})
             });
             if (rs.ok) {
                 const res = await rs.json();

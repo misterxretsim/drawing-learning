@@ -1,6 +1,8 @@
-from flask import Flask, jsonify
-from flask import request
+# coding=utf-8
+# import base64
 import random
+# import numpy as np
+from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
@@ -10,6 +12,7 @@ def examine():
     app.logger.info('Image: ' + request.form['image'])
     app.logger.info('Class: ' + request.form['task'])
     app.logger.info('Level: ' + request.form['level'])
+    # convert(request.form['image'])
     if random.randint(0, 9) > 4:
         return jsonify(result=True, accuracy=random.randint(80, 99))
     else:
@@ -18,3 +21,8 @@ def examine():
 
 if __name__ == '__main__':
     app.run(debug=True)
+
+
+# Функция для конвертирования изображения из формата Data URI в формат numpy array 28x28
+# def convert(data):
+    # app.logger.info(arr)
